@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erick | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Erick — Full-Stack Developer specializing in React, Next.js, and TypeScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">&lt;</span>Erick<span class="brand-bracket"> /&gt;</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas id="particles-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Erick</h1>
+        <div class="hero-title">
+          <span class="title-static">I build </span>
+          <span class="title-dynamic" id="typewriter"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          A passionate Full-Stack Developer from Kenya, crafting modern web experiences
+          with clean code and great design. I love turning ideas into digital products.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-cta-projects">View My Work</a>
+          <a href="#contact" class="btn btn-outline" id="hero-cta-contact">Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com" target="_blank" class="social-icon" id="social-github" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon" id="social-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:erick@email.com" class="social-icon" id="social-email" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-ring">
+          <div class="avatar-glow"></div>
+          <img src="avatar.png" alt="Erick - Full-Stack Developer" class="avatar-img" id="profile-avatar" />
+        </div>
+        <div class="floating-badge badge-1">
+          <span>⚡</span> Next.js
+        </div>
+        <div class="floating-badge badge-2">
+          <span>🎯</span> TypeScript
+        </div>
+        <div class="floating-badge badge-3">
+          <span>🔥</span> React
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// about me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a <strong>Full-Stack Developer</strong> based in Kenya with a passion for building fast, beautiful, and user-friendly web applications. I enjoy working across the entire stack — from designing pixel-perfect UIs to engineering robust backend APIs.</p>
+          <p>I'm currently a student at Kisii University, where I also built <strong>Kisii Secondhand Market</strong>, a platform connecting students to buy and sell secondhand goods. I love solving real-world problems with technology.</p>
+          <p>When I'm not coding, I'm exploring new technologies, contributing to open source, or mentoring fellow developers.</p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Passion</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass-card">
+          <div class="info-row">
+            <span class="info-icon">📍</span>
+            <div>
+              <span class="info-label">Location</span>
+              <span class="info-value">Kisii, Kenya</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">🎓</span>
+            <div>
+              <span class="info-label">Education</span>
+              <span class="info-value">Kisii University</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">💼</span>
+            <div>
+              <span class="info-label">Role</span>
+              <span class="info-value">Full-Stack Developer</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">🌐</span>
+            <div>
+              <span class="info-label">Status</span>
+              <span class="info-value available">✅ Available for hire</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" id="download-cv" download style="margin-top:1.5rem;width:100%;text-align:center;">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// tech stack</span>
+        <h2 class="section-title">My Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">🖥️ Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">⚙️ Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Next.js API</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Server Actions</span>
+            <span class="skill-tag">Auth.js</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">🗄️ Database</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Mongoose</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Prisma</span>
+            <span class="skill-tag">Firebase</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">🛠️ Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">npm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// my work</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card featured" id="project-kisii">
+          <div class="project-badge">⭐ Featured</div>
+          <div class="project-header">
+            <div class="project-icon">🛒</div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </a>
+              <a href="#" target="_blank" class="project-link" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Kisii Secondhand Market</h3>
+          <p class="project-desc">A full-stack marketplace platform for Kisii University students to buy and sell secondhand items. Features real-time chat, admin dashboard, product listings, authentication, and WhatsApp community integration.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Auth.js</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" id="project-2">
+          <div class="project-header">
+            <div class="project-icon">💬</div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Real-Time Chat App</h3>
+          <p class="project-desc">A modern real-time messaging application with user authentication, chat rooms, message history, and a sleek dark UI. Built with WebSockets for instant message delivery.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Socket.io</span>
+            <span class="tech-tag">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" id="project-3">
+          <div class="project-header">
+            <div class="project-icon">📊</div>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Admin Dashboard UI</h3>
+          <p class="project-desc">A responsive admin dashboard with product management, analytics charts, user management, and dark mode. Features a clean, data-rich interface with smooth animations.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Tailwind</span>
+            <span class="tech-tag">Charts.js</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// get in touch</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">Have a project in mind or want to collaborate? I'd love to hear from you. Let's build something amazing together!</p>
+          <div class="contact-cards">
+            <a href="mailto:erick@email.com" class="contact-card glass-card" id="contact-email-link">
+              <span class="contact-card-icon">📧</span>
+              <div>
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value">erick@email.com</span>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" class="contact-card glass-card" id="contact-github-link">
+              <span class="contact-card-icon">🐙</span>
+              <div>
+                <span class="contact-card-label">GitHub</span>
+                <span class="contact-card-value">github.com/erick</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-card glass-card" id="contact-linkedin-link">
+              <span class="contact-card-icon">💼</span>
+              <div>
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-value">linkedin.com/in/erick</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form glass-card" id="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width:100%">
+            <span id="btn-text">Send Message 🚀</span>
+          </button>
+          <p class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Designed & Built by <span class="footer-name">Erick</span> · 
+        <span class="footer-year" id="footer-year"></span>
+      </p>
+      <p class="footer-sub">Made with ❤️ in Kenya</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
